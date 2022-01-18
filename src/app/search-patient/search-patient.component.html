@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-9 col-sm-12 mt-5">
+            <input type="number" value="0"  placeholder="Enter Patient Id" class="form-control" name="patientId" [(ngModel)]="patientId">
+        </div>
+        <div class="col-lg-3 col-sm-12 mt-5">
+            <button type="button" class="btn btn-info" (click) = "findPatientById()">Search</button>
+        </div>
+    </div>
+    <h2 class="mt-5">Results</h2>
+    <div class="row col-lg-12 col-sm-12">
+        
+        <table class="table">
+            <thead>
+                <tr  >
+                    <th> Patient Name</th>
+                    <th> Patient Age </th>
+                    <th> Visit Date</th>
+                    <th> Doctor Prescription </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{patient.patientName}}</td>
+                    <td>{{patient.patientAge}}</td>
+                    <td>{{patient.visitDate}}</td>
+                    <td>{{patient.doctorPrescription}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

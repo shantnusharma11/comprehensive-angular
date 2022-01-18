@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3">
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Show Doctor Info</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+    <a class="dropdown-item" *ngFor= "let doctor of doctors"
+    [class.selected]="doctor === selectedDoctor " (click)="onSelect(doctor)">{{doctor.doctorName}}</a>
+</div>
+</div>
+
+<br>
+<br>
+<div *ngIf="selectedDoctor">
+<h2>{{selectedDoctor.doctorName | uppercase}} Details</h2>
+<table class ="table table-striped">
+    <thead>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Doctor Age</th>
+            <th>Doctor Gender</th>
+            <th> Specialist Field</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let doctor of doctors" >
+            <td> {{ doctor.doctorName }} </td>
+            <td> {{ doctor.doctorAge }} </td>
+            <td> {{ doctor.doctorGender }} </td>
+            <td> {{ doctor.specialistField }} </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>

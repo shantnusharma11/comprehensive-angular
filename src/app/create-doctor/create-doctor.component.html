@@ -1,0 +1,43 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Doctor </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Doctor Name</label>
+            <input type="text" class ="form-control" id = "doctorName"
+                [(ngModel)] = "doctor.doctorName" name = "doctorName">
+        </div>
+    
+        <div class="form-group">
+            <label> Doctor Age</label>
+            <input type="text" class ="form-control" id = "doctorAge"
+                [(ngModel)] = "doctor.doctorAge" name = "doctorAge">
+        </div>
+
+        <div class="form-group">
+            <label> Doctor Gender</label>
+            <input type="text" class ="form-control" id = "gendre" list="gender"
+                [(ngModel)] = "doctor.doctorGender" name = "doctorGender">
+       <datalist id="gender">
+           <option>Male</option>
+           <option>Female</option>
+       </datalist>
+            </div>
+
+        <div class="form-group">
+            <label> Specialist Field</label>
+            <input type="text" class ="form-control" id = "specialField" list="doctorspecialistField"
+                [(ngModel)] = "doctor.specialistField" name = "specialistField">
+            <datalist id="doctorspecialistField">
+                <option>Dentist</option>
+                <option>Neurology</option>
+                <option>Cardiology</option>
+                <option>Surgeon</option>
+            </datalist>
+            </div>
+
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
